@@ -1,9 +1,4 @@
+from django.http import JsonResponse
 
-from django.core.serializers import serialize
-from django.http import HttpResponse
-from .models import Bio
-
-def django_models_json(request):
-    queryset = Bio.objects.all()
-    data = serialize("json", fields=('slackUsername', 'backend', 'age', 'bio'))
-    return HttpResponse(data, content_type="application/json")
+def home(request):
+    return JsonResponse({"slackUsername": "Sang", "backend": "true", "age": 65, "bio": "I am a backend engineer"})

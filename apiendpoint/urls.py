@@ -3,12 +3,9 @@ from rest_framework import routers
 
 from apiendpoint.models import Bio
 
-from .views import django_models_json
-
-router = routers.DefaultRouter()
-router.register(r'bio', django_models_json, basename='bio')
+from . import views
 
 
 urlpatterns = [
-    path('', include(router.urls))
+    path('', views.home)
 ]
