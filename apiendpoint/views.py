@@ -1,4 +1,10 @@
 from django.http import JsonResponse
 
+from apiendpoint.models import Bio
+
 def home(request):
-    return JsonResponse({"slackUsername": "Sang", "backend": "true", "age": 65, "bio": "I am a backend engineer"})
+    queryset = Bio.objects.all()
+    context = {
+        'queryset': queryset
+    }
+    return JsonResponse(context, safe=False)
