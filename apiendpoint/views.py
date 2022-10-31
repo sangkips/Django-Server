@@ -13,4 +13,4 @@ class BioViewSet(viewsets.ModelViewSet):
 
     def list(self, request):
         response = super().list(request)
-        return Response({"success": 1 if response.data else 0, "data": response.data})
+        return Response({"data": response.data})
