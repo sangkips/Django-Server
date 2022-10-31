@@ -10,8 +10,3 @@ import json
 class BioViewSet(viewsets.ModelViewSet):
     queryset = Bio.objects.all()
     serializer_class = BioSerializer
-
-
-    def post(self, request, **kwargs):
-        response_data = super().list(request)
-        return HttpResponse(json.dumps(response_data),content_type="application/json")
