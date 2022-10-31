@@ -4,4 +4,4 @@ from rest_framework import serializers
 class BioSerializer(serializers.ModelSerializer):
     class Meta:
         model = Bio
-        fields = ['slackUsername', 'backend', 'age', 'age', 'bio']
+        fields = ['slackUsername', 'backend', 'age', 'bio']
