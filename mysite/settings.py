@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     'apiendpoint',
     'rest_framework',
     "corsheaders",
+    'rest_framework_json_api',
 ]
 
 CORS_ORIGIN_ALLOW_ALL = True
